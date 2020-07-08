@@ -10,9 +10,11 @@ Install a latest [pytorch](https://pytorch.org) python environment.
 Download the cifar10 dataset and split it for the workers.
 
 ```
+mkdir data/ combine/
 cd data
 wget http://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz
 tar xzvf cifar-10-python.tar.gz
+mkdir splited_cifar
 cd ..
 python dataset_split.py
 ```
@@ -22,12 +24,14 @@ python dataset_split.py
 For constant partial reduce with P=3:
 
 ```
+chmod +x run_con_p_3.sh
 ./run_con_p_3.sh
 ```
 
 For dynamic partial reduce with P=3:
 
 ```
+chmod +x run_dyn_p_3.sh
 ./run_dyn_p_3.sh
 ```
 
